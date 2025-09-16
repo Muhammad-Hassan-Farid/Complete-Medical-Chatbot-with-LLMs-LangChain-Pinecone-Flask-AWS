@@ -22,6 +22,35 @@ body,html{
 }
 .msg_card_body{
 	overflow-y: auto;
+	scroll-behavior: smooth;
+}
+.loading-indicator {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 0;
+}
+
+/* Fade-in animation for messages */
+.fade-in {
+	animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(20px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+	.chat {
+		margin: 0;
+	}
+	.card {
+		height: 80vh;
+		min-height: 400px;
+	}
+	.msg_card_body {
+		font-size: 0.95em;
+	}
 }
 .card-header{
 	border-radius: 15px 15px 0 0 !important;
